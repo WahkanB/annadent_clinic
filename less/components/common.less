@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+ }
+ 
+ ::-webkit-scrollbar {
+    height: .5rem;
+ 
+    width: 1rem;
+ }
+ 
+ ::-webkit-scrollbar-track {
+    background-color: transparent;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+ }
+ 
+ html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+ 
+ }
+ 
+ section {
+    padding: 7rem 2rem;
+ }
+
+
+ /*media queries*/
+ @media (max-width:991px) {
+   html {
+      font-size: 55%;
+   }
+
+   .header .link-btn {
+      display: none;
+   }
+
+   section {
+      padding: 5rem 2rem;
+   }
+}
+
+@media (max-width:768px) {
+   section {
+      padding: 3rem 1rem;
+   }
+
+   #menu-btn {
+      display: inline-block;
+      transition: .2s linear;
+   }
+
+   #menu-btn.hide {
+      transform: rotate(180deg);
+   }
+
+   .header .nav {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background-color: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding: 1rem 0;
+      text-align: center;
+      flex-flow: column;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+
+   }
+
+   .header .nav.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .nav a {
+      margin: 1rem 0;
+      font-size: 2rem;
+   }
+
+   .home {
+      background-position: left;
+   }
+
+   .home .content {
+      width: auto;
+   }
+
+}
+
+@media (max-width:450px) {
+   html {
+      font-size: 50%;
+   }
+
+   .home .content h3 {
+      font-size: 4rem;
+   }
+
+   .heading {
+      font-size: 2rem;
+   }
+}

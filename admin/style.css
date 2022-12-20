@@ -1,0 +1,200 @@
+:root {
+   --blue:	#00CED1;
+   --black: #333;
+   --white: #fff;
+   --light-color: #666;
+   --light-bg: #eee;
+   --border: 2rem solid rgba(0, 0, 0, .5);
+   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none !important;
+   text-transform: capitalize;
+}
+
+::-webkit-scrollbar {
+   height: .5rem;
+
+   width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: var(--blue);
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6.5rem;
+
+}
+
+body{
+   background-color:var(--light-bg);
+}
+
+.top-row {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.heading {
+   text-align: center;
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: uppercase;
+   font-weight: bolder;
+   margin-bottom: 3rem;margin-bottom: 3rem;
+
+}
+
+.header {
+
+   padding: 2rem;
+   border-bottom: var(--border);
+
+
+}
+
+.header.active {
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border: 0;
+}
+
+.header .logo {
+   font-size: 3rem;
+   color: var(--black);
+}
+
+.header .logo span {
+   color: var(--blue);
+}
+
+.header .nav a {
+   margin: 0 1rem;
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.header .nav a:hover {
+   color: var(--blue);
+   font-size:3rem ;
+}
+
+
+
+ .box{
+   position: relative;
+   margin: auto;
+   display: block;
+   border: solid 4rem var(--blue);
+   margin-top: 10%;
+   padding-top: 10%;
+   width:70rem;
+   height: 50rem;
+   background: none;
+}
+.letters{
+   
+   font-size: 10vmin;
+   text-transform: uppercase;
+   font-weight: 500;
+   display: block;
+   text-align: center;
+
+   animation: jsLetter 2s 1;
+}
+.logoanime{
+   font-size: 5vmin;
+   font-weight: 200;
+   display: block;
+   text-align: center;
+
+   animation: logoAnimation 3s 3s 1;
+}
+
+@keyframes jsLetter{
+   0%{
+      color: var(--blue);
+      transform: rotate(0deg);
+   }
+   100%{
+      color: var(--light-color);
+      transform: rotate(360deg);
+   }
+}
+@keyframes logoAnimation{
+   0%{
+      color: var(--blue);
+      transform: scale(0.2);
+   }
+   50%{
+      
+      transform: scale(1.5);
+   }
+   100%{
+      color: var(--light-color);
+      transform: scale(1);
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+@media (max-width:991px) {
+   html {
+      font-size: 55%;
+   }
+}
+
+@media (max-width:768px) {
+   body {
+      padding: 3rem 1rem;
+   }
+}
+
+@media (max-width:450px) {
+   html {
+      font-size: 50%;
+   }
+}
